@@ -10,7 +10,30 @@ var firstMethod=function(sentence){
 
   var newString=firstLetter+lastLetter;
 
-  document.write(newString);
+  //document.write(newString);
+  return newString;
+};
+
+var letterSwitch=function(returnedLetters) {
+  var switchString=returnedLetters.charAt(1) + returnedLetters.charAt(0);
+
+  //document.write(switchString);
+  return switchString;
+};
+
+var thirdFunction=function(sentence){
+  document.write(sentence+switchedLetters);
+};
+
+var fourthFunction=function(sentence){
+  var midLetter=sentence.charAt((sentence.length)/2);
+  document.write(midLetter);
 }
 
-firstMethod(sentence);
+var returnedLetters=firstMethod(sentence);
+var switchedLetters=letterSwitch(returnedLetters);
+
+//document.write("first method" +returnedLetters+"\n Second method" +switchedLetters);
+
+fourthFunction(sentence);
+thirdFunction(sentence);
